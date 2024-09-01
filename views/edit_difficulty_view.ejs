@@ -1,0 +1,22 @@
+<%- include("header") %>
+<%- include("header2") %>
+
+<div style="border: 2px solid #ddd; padding: 20px; width: 900px; margin: 50px auto; background-color: #f9f9f9; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); border-radius: 8px;">
+    <form action="/updateDifficulty" method="post">
+        <input type="hidden" name="D_id" value="<%= difficulty._id %>">
+        <table class="table table-bordered" style="width: 100%; margin-bottom: 0;">
+            <tr>
+                <td>D_value</td>
+                <td><input type="text" name="D_value" value="<%= difficulty.D_value %>" required></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <button type="submit" class="btn btn-primary" style="padding: 10px 20px; font-size: 16px;">Update Difficulty Level</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+</body>
+</html>

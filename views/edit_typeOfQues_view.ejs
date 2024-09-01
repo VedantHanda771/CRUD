@@ -1,0 +1,23 @@
+<%- include("header") %>
+<%- include("header2") %>
+
+<div style="border: 2px solid #ddd; padding: 20px; width: 900px; margin: 50px auto; background-color: #f9f9f9; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); border-radius: 8px;">
+    <h2 style="text-align: center; margin-bottom: 20px;">Update Type of Question</h2>
+    <form action="/updateTypeOfQues" method="post">
+        <input type="hidden" name="T_id" value="<%= typeOfQues._id %>">
+        <table class="table table-bordered" align="center">
+            <tr>
+                <td style="width: 30%; font-weight: bold; color: #343a40; text-align: center;">T_name</td>
+                <td><input type="text" name="T_name" value="<%= typeOfQues.T_name %>" required class="form-control" style="width: 100%;"></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <button type="submit" class="btn btn-primary" style="padding: 10px 20px; font-size: 16px;">Update Type of Question</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+</body>
+</html>

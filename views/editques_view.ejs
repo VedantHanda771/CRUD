@@ -1,0 +1,47 @@
+<%- include("header") %>
+<%- include("header2") %>
+
+<div style="border: 2px solid #ddd; padding: 20px; width: 900px; margin: 50px auto; margin-top: -1%; background-color: #f9f9f9; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); border-radius: 8px;">
+    <h2 style="text-align: center; margin-bottom: 20px;">Edit Question</h2>
+    <form action="/updateques" method="post">
+        <input type="hidden" name="quesid" value="<%= question._id %>">
+        <table class="table table-bordered">
+            <tr>
+                <td style="width: 30%; font-weight: bold; color: #343a40; text-align: center;">Q_name</td>
+                <td><input type="text" name="Q_name" value="<%= question.Q_name %>" required class="form-control" style="width: 100%;"></td>
+            </tr>
+            <tr>
+                <td style="width: 30%; font-weight: bold; color: #343a40; text-align: center;">Q_explanation</td>
+                <td><input type="text" name="Q_explanation" value="<%= question.Q_explanation %>" required class="form-control" style="width: 100%;"></td>
+            </tr>
+            <tr>
+                <td style="width: 30%; font-weight: bold; color: #343a40; text-align: center;">Q_input</td>
+                <td><input type="text" name="Q_input" value="<%= question.Q_input %>" required class="form-control" style="width: 100%;"></td>
+            </tr>
+            <tr>
+                <td style="width: 30%; font-weight: bold; color: #343a40; text-align: center;">Q_output</td>
+                <td><input type="text" name="Q_output" value="<%= question.Q_output %>" required class="form-control" style="width: 100%;"></td>
+            </tr>
+            <tr>
+                <td style="width: 30%; font-weight: bold; color: #343a40; text-align: center;">TypeOfQues</td>
+                <td><input type="text" name="TypeOfQues" value="<%= question.TypeOfQues %>" required class="form-control" style="width: 100%;"></td>
+            </tr>
+            <tr>
+                <td style="width: 30%; font-weight: bold; color: #343a40; text-align: center;">Solved</td>
+                <td><input type="text" name="Solved" value="<%= question.Solved %>" required class="form-control" style="width: 100%;"></td>
+            </tr>
+            <tr>
+                <td style="width: 30%; font-weight: bold; color: #343a40; text-align: center;">Comp_name</td>
+                <td><input type="text" name="Comp_name" value="<%= question.Comp_name %>" required class="form-control" style="width: 100%;"></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <button type="submit" class="btn btn-primary" style="padding: 10px 20px; font-size: 16px;">Update Question</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+</body>
+</html>

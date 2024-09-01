@@ -1,0 +1,47 @@
+<%- include("header") %>
+<%- include("header2") %>
+
+<div class="container" style="margin-top: 20px;">
+    <div class="text-center" style="margin-bottom: 20px;">
+        <a href="/addquestion" class="btn btn-primary">Add Question</a>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading text-center">
+            <h3 class="panel-title">Questions List</h3>
+        </div>
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Q_name</th>
+                    <th>Q_explanation</th>
+                    <th>Q_input</th>
+                    <th>Q_output</th>
+                    <th>TypeOfQues</th>
+                    <th>Solved</th>
+                    <th>Comp_name</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for (let d of quesList) { %>
+                    <tr>
+                        <td><%= d.Q_name %></td>
+                        <td><%= d.Q_explanation %></td>
+                        <td><%= d.Q_input %></td>
+                        <td><%= d.Q_output %></td>
+                        <td><%= d.TypeOfQues %></td>
+                        <td><%= d.Solved %></td>
+                        <td><%= d.Comp_name %></td>
+                        <td class="text-center">
+                            <a href="/editques?quesid=<%= d._id %>" class="btn btn-warning btn-sm">Edit</a>
+                            <a href="/deleteques?quesid=<%= d._id %>" class="btn btn-danger btn-sm">Delete</a>
+                        </td>
+                    </tr>
+                <% } %>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>

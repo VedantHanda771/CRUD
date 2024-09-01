@@ -1,0 +1,22 @@
+<%- include("header") %>
+<%- include("header2") %>
+
+<div style="border: 2px solid #ddd; padding: 20px; width: 900px; margin: 50px auto; background-color: #f9f9f9; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); border-radius: 8px;">
+    <h2 style="text-align: center; color: #343a40; margin-bottom: 20px;">Add Difficulty Level</h2>
+    <form action="/addDifficultySubmit" method="post">
+        <table class="table table-striped table-bordered">
+            <tr>
+                <td style="width: 30%; font-weight: bold; color: #343a40; text-align: center;">D_value</td>
+                <td><input type="text" name="D_value" required class="form-control" style="width: 100%;"></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <button type="submit" class="btn btn-primary" style="padding: 10px 20px; font-size: 16px;">Add Difficulty Level</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+</body>
+</html>

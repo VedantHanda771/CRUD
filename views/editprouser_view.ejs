@@ -1,0 +1,50 @@
+<%- include("header") %>
+
+<div style="border: 2px solid #ddd; padding: 20px; width: 900px; margin: 50px auto; background-color: #f9f9f9; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); border-radius: 8px;">
+    <h2 style="text-align: center; margin-bottom: 20px;">Edit Professional User</h2>
+    <form action="/updateprouser" method="post">
+        <input type="hidden" name="prouserid" value="<%= proUser._id %>">
+        <table class="table table-bordered">
+            <tr>
+                <td style="width: 30%; font-weight: bold; color: #343a40; text-align: center;">P_name</td>
+                <td><input type="text" name="P_name" value="<%= proUser.P_name %>" required class="form-control" style="width: 100%;"></td>
+            </tr>
+            <tr>
+                <td style="width: 30%; font-weight: bold; color: #343a40; text-align: center;">P_email</td>
+                <td><input type="email" name="P_email" value="<%= proUser.P_email %>" required class="form-control" style="width: 100%;"></td>
+            </tr>
+            <tr>
+                <td style="width: 30%; font-weight: bold; color: #343a40; text-align: center;">P_dob</td>
+                <td><input type="date" name="P_dob" value="<%= proUser.P_dob %>" required class="form-control" style="width: 100%;"></td>
+            </tr>
+            <tr>
+                <td style="width: 30%; font-weight: bold; color: #343a40; text-align: center;">P_status</td>
+                <td><input type="text" name="P_status" value="<%= proUser.P_status %>" required class="form-control" style="width: 100%;"></td>
+            </tr>
+            <tr>
+                <td style="width: 30%; font-weight: bold; color: #343a40; text-align: center;">P_StartDate</td>
+                <td><input type="date" name="P_StartDate" value="<%= proUser.P_StartDate %>" required class="form-control" style="width: 100%;"></td>
+            </tr>
+            <tr>
+                <td style="width: 30%; font-weight: bold; color: #343a40; text-align: center;">P_endDate</td>
+                <td><input type="date" name="P_endDate" value="<%= proUser.P_endDate %>" required class="form-control" style="width: 100%;"></td>
+            </tr>
+            <tr>
+                <td style="width: 30%; font-weight: bold; color: #343a40; text-align: center;">Course_id</td>
+                <td><input type="text" name="Course_id" value="<%= proUser.Course_id %>" required class="form-control" style="width: 100%;"></td>
+            </tr>
+            <tr>
+                <td style="width: 30%; font-weight: bold; color: #343a40; text-align: center;">Status</td>
+                <td><input type="text" name="Status" value="<%= proUser.Status %>" required class="form-control" style="width: 100%;"></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <button type="submit" class="btn btn-primary" style="padding: 10px 20px; font-size: 16px;">Update Professional User</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<%- include("header") %>
+
+<div style="border: 2px solid #ddd; padding: 20px; width: 900px; margin: 50px auto; background-color: #f9f9f9; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); border-radius: 8px;">
+    <h2 style="text-align: center; margin-bottom: 20px;">Update Course</h2>
+    <form action="/updateCourse" method="post">
+        <input type="hidden" name="Course_id" value="<%= course._id %>">
+        <table class="table table-bordered" align="center">
+            <tr>
+                <td style="width: 30%; font-weight: bold; color: #343a40; text-align: center;">Course_name</td>
+                <td><input type="text" name="Course_name" value="<%= course.Course_name %>" required class="form-control" style="width: 100%;"></td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold; color: #343a40; text-align: center;">Course_price</td>
+                <td><input type="text" name="Course_price" value="<%= course.Course_price %>" required class="form-control" style="width: 100%;"></td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold; color: #343a40; text-align: center;">Course_description</td>
+                <td><textarea name="Course_description" required class="form-control" style="width: 100%;"><%= course.Course_description %></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <button type="submit" class="btn btn-primary" style="padding: 10px 20px; font-size: 16px;">Update Course</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+</body>
+</html>

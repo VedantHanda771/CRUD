@@ -1,0 +1,49 @@
+<%- include("header") %>
+
+<div style="border: 2px solid #ddd; padding: 20px; width: 900px; margin: 50px auto; background-color: #f9f9f9; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); border-radius: 8px;">
+    <h2 style="text-align: center; color: #343a40; margin-bottom: 20px;">Add Professional User</h2>
+    <form action="/addprouser" method="post">
+        <table class="table table-striped table-bordered">
+            <tr>
+                <td style="width: 30%; font-weight: bold; color: #343a40; text-align: center;">P_name</td>
+                <td><input type="text" name="P_name" required class="form-control" style="width: 100%;"></td>
+            </tr>
+            <tr>
+                <td style="width: 30%; font-weight: bold; color: #343a40; text-align: center;">P_email</td>
+                <td><input type="email" name="P_email" required class="form-control" style="width: 100%;"></td>
+            </tr>
+            <tr>
+                <td style="width: 30%; font-weight: bold; color: #343a40; text-align: center;">P_dob</td>
+                <td><input type="date" name="P_dob" required class="form-control" style="width: 100%;"></td>
+            </tr>
+            <tr>
+                <td style="width: 30%; font-weight: bold; color: #343a40; text-align: center;">P_status</td>
+                <td><input type="text" name="P_status" required class="form-control" style="width: 100%;"></td>
+            </tr>
+            <tr>
+                <td style="width: 30%; font-weight: bold; color: #343a40; text-align: center;">P_StartDate</td>
+                <td><input type="date" name="P_StartDate" required class="form-control" style="width: 100%;"></td>
+            </tr>
+            <tr>
+                <td style="width: 30%; font-weight: bold; color: #343a40; text-align: center;">P_endDate</td>
+                <td><input type="date" name="P_endDate" required class="form-control" style="width: 100%;"></td>
+            </tr>
+            <tr>
+                <td style="width: 30%; font-weight: bold; color: #343a40; text-align: center;">Course_id</td>
+                <td><input type="text" name="Course_id" required class="form-control" style="width: 100%;"></td>
+            </tr>
+            <tr>
+                <td style="width: 30%; font-weight: bold; color: #343a40; text-align: center;">Status</td>
+                <td><input type="text" name="Status" required class="form-control" style="width: 100%;"></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <button type="submit" class="btn btn-primary" style="padding: 10px 20px; font-size: 16px;">Add Professional User</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+</body>
+</html>
